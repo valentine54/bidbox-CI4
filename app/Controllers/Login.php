@@ -16,6 +16,27 @@ class Login extends BaseController
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
+        // Define your admin credentials
+        $adminEmail = 'admin234@gmail.com';
+        $adminPassword = '@admin005'; // Ensure this is hashed
+        $adminPasswordHash = password_hash($adminPassword, PASSWORD_DEFAULT);
+
+        // Check if the submitted credentials match admin credentials
+        if ($email === $adminEmail && password_verify($password, $adminPasswordHash)) {
+            // Set admin user session data (you can customize this as needed)
+            $adminData = [
+                'id' => 0, // Example ID for admin
+                'email' => $email,
+                'role' => 'admin' // Example role for admin
+            ];
+
+            session()->set('user', $adminData);
+            session()->set('isLoggedIn', true);
+
+            // Redirect to admin dashboard or specific admin page
+            return redirect()->to('/admin/users');
+        }
+
 
         $model = new UserModel();
         $user = $model->where('email', $email)->first();
@@ -30,7 +51,17 @@ class Login extends BaseController
                     // Set user data in session
                     $this->setUserSession($user);
                     // Redirect to dashboard
-                    return redirect()->to('/dashboard');
+                    // Redirect based on user role
+                    switch ($user['role']) {
+                        case 'auctioneer':
+                            return redirect()->to('/auctioneer/view-sellers');
+                        case 'bidder':
+                            return redirect()->to('/bidder/dashboard');
+                        case 'seller':
+                            return redirect()->to('/seller/dashboard');
+                        default:
+                            return redirect()->to('/dashboard'); // Default redirect for users with unspecified roles
+                    }
                 } else {
                     // User account is not activated
                     return redirect()->back()->with('error', 'Your account is not activated. Please check your email.');
@@ -55,8 +86,12 @@ class Login extends BaseController
     {
         $data = [
             'id' => $user['id'],
+            'Name' => $user['Name'],
+            'contact' => $user['contact'],
             'email' => $user['email'],
-            // Add more user data if needed
+            'role' => $user['role'],
+            'profile_picture' => $user['profile_picture'],
+
         ];
 
         session()->set('user', $data);
@@ -99,6 +134,16 @@ class Login extends BaseController
             return redirect()->back()->with('error', 'User not found.');
         }
     }
+    public function editProfile()
+    {
+        $userId = session()->get('user')['id']; // Retrieve user ID from session
+        $model = new UserModel();
+        $user = $model->find($userId); // Fetch user data from the database
+
+        // Pass user data to the view
+        return view('profile/edit', ['user' => $user]);
+    }
+
 
     private function sendPasswordResetEmail($email, $token)
     {
@@ -119,8 +164,70 @@ class Login extends BaseController
 
         $emailService->setTo($email);
         $emailService->setSubject('Password Reset');
-        $message = "<p>Please click the link below to reset your password:</p>";
-        $message .= "<p><a href='".base_url('reset-password/' . $token)."'>Reset Password</a></p>";
+
+        $message = "
+    <html>
+    <head>
+        <style>
+            .email-container {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                margin: auto;
+            }
+            .email-header {
+                background-color: #995fd5;
+                color: white;
+                padding: 10px;
+                border-radius: 5px 5px 0 0;
+                text-align: center;
+            }
+            .email-body {
+                padding: 20px;
+                background-color: white;
+                border-radius: 0 0 5px 5px;
+                color: black;
+            }
+            .button-container {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white !important;
+                background-color: #7e3fd7;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .button:hover {
+                background-color: #432188;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='email-container'>
+            <div class='email-header'>
+                <h1>Password Reset</h1>
+            </div>
+            <div class='email-body'>
+                <h3>Reset Your Password</h3>
+                <p>We received a request to reset your password. If you did not make this request, please ignore this email.</p>
+                <p>Otherwise, you can reset your password using the button below:</p>
+                <div class='button-container'>
+                    <a href='".base_url('reset-password/' . $token)."' class='button'>Reset Password</a>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    ";
+
         $emailService->setMessage($message);
 
         if (!$emailService->send()) {
@@ -133,7 +240,7 @@ class Login extends BaseController
 
 
 
-        public function resetPasswordForm($token)
+    public function resetPasswordForm($token)
     {
         // Check if token exists in the database
         $model = new UserModel();

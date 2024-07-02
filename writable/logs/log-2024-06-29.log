@@ -1,0 +1,106 @@
+CRITICAL - 2024-06-29 17:34:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "applications/merchant.php"
+[Method: GET, Route: merchant-application]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\ApplicationController.php(12): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApplicationController->merchant()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 17:34:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "applications/merchant.php"
+[Method: GET, Route: merchant-application]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\ApplicationController.php(12): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApplicationController->merchant()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 23:06:43 --> Error: Class "App\Models\UserModel" not found
+[Method: POST, Route: login/authenticate]
+in APPPATH\Controllers\Login.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 23:06:56 --> Error: Class "App\Models\UserModel" not found
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Controllers\Admin\AdminController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 23:06:59 --> Error: Class "App\Models\UserModel" not found
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Controllers\Admin\AdminController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 23:07:00 --> Error: Class "App\Models\UserModel" not found
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Controllers\Admin\AdminController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 23:07:00 --> Error: Class "App\Models\UserModel" not found
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Controllers\Admin\AdminController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 23:08:29 --> Error: Class "App\Models\UserModel" not found
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Controllers\Admin\AdminController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 23:08:48 --> Error: Class "App\Models\UserModel" not found
+[Method: GET, Route: admin/users]
+in APPPATH\Controllers\Admin\AdminController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-29 23:08:51 --> Error: Class "App\Models\UserModel" not found
+[Method: GET, Route: admin/users]
+in APPPATH\Controllers\Admin\AdminController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')

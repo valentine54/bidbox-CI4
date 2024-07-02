@@ -1,0 +1,88 @@
+CRITICAL - 2024-07-02 05:20:37 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: admin/update_status_direct]
+in APPPATH\Controllers\Admin\AdminController.php on line 411.
+ 1 APPPATH\Controllers\Admin\AdminController.php(411): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->update_status_direct()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-02 05:20:46 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: admin/update_status_direct]
+in APPPATH\Controllers\Admin\AdminController.php on line 411.
+ 1 APPPATH\Controllers\Admin\AdminController.php(411): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->update_status_direct()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-02 05:22:18 --> ErrorException: Undefined property: App\Controllers\Admin\AdminController::$input
+[Method: POST, Route: admin/update_status_direct]
+in APPPATH\Controllers\Admin\AdminController.php on line 413.
+ 1 APPPATH\Controllers\Admin\AdminController.php(413): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->update_status_direct()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-02 05:24:22 --> ErrorException: Undefined property: App\Controllers\Admin\AdminController::$input
+[Method: POST, Route: admin/update_status_direct]
+in APPPATH\Controllers\Admin\AdminController.php on line 413.
+ 1 APPPATH\Controllers\Admin\AdminController.php(413): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->update_status_direct()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-02 05:26:21 --> ErrorException: Undefined property: App\Controllers\Admin\AdminController::$input
+[Method: POST, Route: admin/update_status_direct]
+in APPPATH\Controllers\Admin\AdminController.php on line 415.
+ 1 APPPATH\Controllers\Admin\AdminController.php(415): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->update_status_direct()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-02 06:24:42 --> ErrorException: Undefined property: App\Controllers\Admin\AdminController::$input
+[Method: POST, Route: admin/update_status_direct]
+in APPPATH\Controllers\Admin\AdminController.php on line 415.
+ 1 APPPATH\Controllers\Admin\AdminController.php(415): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->update_status_direct()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-02 06:25:02 --> ErrorException: Undefined property: App\Controllers\Admin\AdminController::$input
+[Method: POST, Route: admin/update_status_direct]
+in APPPATH\Controllers\Admin\AdminController.php on line 415.
+ 1 APPPATH\Controllers\Admin\AdminController.php(415): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->update_status_direct()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-02 07:09:10 --> ErrorException: Undefined variable $applications
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Controllers\Admin\AdminController.php on line 22.
+ 1 APPPATH\Controllers\Admin\AdminController.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')

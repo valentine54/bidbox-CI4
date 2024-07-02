@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
     <title>User Registration</title>
     <style>
         body {
@@ -111,9 +116,9 @@
         <?= session()->getFlashdata('error'); ?>
         <?= session()->getFlashdata('success'); ?>
     </div>
-    <form method="post" action="<?= site_url('register/process') ?>">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<?= old('name') ?>" required>
+    <form method="post" action="<?= site_url('register/process') ?>" enctype="multipart/form-data">
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" value="<?= old('Name') ?>" required>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" value="<?= old('email') ?>" required>
@@ -132,19 +137,8 @@
         <input type="password" name="confirm_password" id="confirm_password" required>
 
         <label for="contact">Contact:</label>
-        <input type="text" id="contact" name="contact" value="<?= old('contact') ?>" required>
+        <input type="tel" name="contact" id="contact" required>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" value="<?= old('age') ?>" required>
-
-        <label for="role">Role:</label>
-        <select id="role" name="role" required>
-            <option value="">Select Role</option>
-            <option value="admin" <?= old('role') == 'admin' ? 'selected' : '' ?>>Admin</option>
-            <option value="bidder" <?= old('role') == 'bidder' ? 'selected' : '' ?>>Bidder</option>
-            <option value="seller" <?= old('role') == 'seller' ? 'selected' : '' ?>>Seller</option>
-            <option value="auctioneer" <?= old('role') == 'auctioneer' ? 'selected' : '' ?>>Auctioneer</option>
-        </select>
 
         <button type="submit">Register</button>
     </form>
@@ -152,5 +146,50 @@
         Already have an account? <a href="<?= site_url('login') ?>">Login</a>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        var input = document.querySelector("#contact");
+        var iti = window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "us";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
+        });
+
+        function setMask() {
+            var countryData = iti.getSelectedCountryData();
+            var exampleNumber = iti.getNumberPlaceholder().replace(/[0-9]/g, '9'); // Extract number pattern from example
+            var phoneNumberLength = exampleNumber.length; // Get length of phone number format
+
+            // Remove any existing mask
+            $('#contact').inputmask('remove');
+            // Set the new mask
+            $('#contact').inputmask({
+                mask: exampleNumber,
+                placeholder: "",
+                clearMaskOnLostFocus: true
+            });
+
+            // Set the maximum length
+            var maxLength = iti.getNumberPlaceholder().replace(/[^0-9]/g, '').length;
+            input.setAttribute('maxlength', maxLength + iti.getSelectedCountryData().dialCode.length);
+        }
+
+        input.addEventListener('countrychange', function() {
+            input.value = "+" + iti.getSelectedCountryData().dialCode;
+            setMask();
+        });
+
+        // Initial setup to apply mask on page load
+        iti.promise.then(function() {
+            input.value = "+" + iti.getSelectedCountryData().dialCode;
+            setMask();
+        });
+    });
+</script>
 </body>
 </html>

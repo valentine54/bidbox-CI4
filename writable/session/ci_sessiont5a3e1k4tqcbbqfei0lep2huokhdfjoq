@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1718693149;_ci_previous_url|s:37:"http://localhost:8080/index.php/login";warning|s:51:"User updated successfully but email failed to send.";__ci_vars|a:2:{s:7:"warning";s:3:"old";s:7:"success";s:3:"new";}success|s:41:"User updated successfully and email sent.";

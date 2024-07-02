@@ -1,0 +1,423 @@
+CRITICAL - 2024-06-17 09:58:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/users.php"
+[Method: GET, Route: admin/users]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(16): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 09:58:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/roles.php"
+[Method: GET, Route: admin/roles]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(21): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->roles()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 09:58:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/sales_history.php"
+[Method: GET, Route: admin/sales-history]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(26): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->salesHistory()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:27:48 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/users]
+in APPPATH\Views\admin\users.php on line 113.
+ 1 APPPATH\Views\admin\users.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(25): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:27:53 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/users]
+in APPPATH\Views\admin\users.php on line 113.
+ 1 APPPATH\Views\admin\users.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(25): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:32:30 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/users]
+in APPPATH\Views\admin\users.php on line 113.
+ 1 APPPATH\Views\admin\users.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(25): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:43:49 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/users]
+in APPPATH\Views\admin\users.php on line 113.
+ 1 APPPATH\Views\admin\users.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(29): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:43:53 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/users]
+in APPPATH\Views\admin\users.php on line 113.
+ 1 APPPATH\Views\admin\users.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(29): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:44:01 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/users]
+in APPPATH\Views\admin\users.php on line 113.
+ 1 APPPATH\Views\admin\users.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(29): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:51:37 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/edit-user/46]
+in APPPATH\Views\admin\edit_user.php on line 94.
+ 1 APPPATH\Views\admin\edit_user.php(94): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->editUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:52:32 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/edit-user/46]
+in APPPATH\Views\admin\edit_user.php on line 94.
+ 1 APPPATH\Views\admin\edit_user.php(94): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->editUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:58:09 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/edit-user/46]
+in APPPATH\Views\admin\edit_user.php on line 94.
+ 1 APPPATH\Views\admin\edit_user.php(94): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(47): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->editUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 10:58:12 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/edit-user/46]
+in APPPATH\Views\admin\edit_user.php on line 94.
+ 1 APPPATH\Views\admin\edit_user.php(94): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(47): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->editUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-06-17 11:42:50 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.gmail.com failed: No such host is known.  in C:\xampp3\htdocs\Ci4_project\system\Email\Email.php:1896
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\xampp3\htdocs\Ci4_project\system\Email\Email.php(1896): fsockopen()
+#2 C:\xampp3\htdocs\Ci4_project\system\Email\Email.php(1809): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp3\htdocs\Ci4_project\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp3\htdocs\Ci4_project\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp3\htdocs\Ci4_project\app\Controllers\Register.php(165): CodeIgniter\Email\Email->send()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Register.php(50): App\Controllers\Register->sendActivationEmail()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Register->process()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+ERROR - 2024-06-17 11:42:50 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-06-17 11:42:50 --> 
+ERROR - 2024-06-17 11:42:50 --> Email sending failed: Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Mon, 17 Jun 2024 11:42:39 +0000
+To: wvalentinem@gmail.com
+Subject: =?UTF-8?Q?Account=20Activation?=
+From: &quot;Bid Box&quot; &lt;kellygituka@gmail.com&gt;
+Return-Path: &lt;kellygituka@gmail.com&gt;
+Reply-To: &lt;kellygituka@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: kellygituka@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;6670212f8b4982.49724441@gmail.com&gt;
+Mime-Version: 1.0
+
+</pre>
+ERROR - 2024-06-17 11:42:50 --> Failed to send activation email for user: wvalentinem@gmail.com
+CRITICAL - 2024-06-17 11:46:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/roles.php"
+[Method: GET, Route: admin/roles]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(72): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->roles()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 12:14:47 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/roles]
+in APPPATH\Views\admin\roles.php on line 86.
+ 1 APPPATH\Views\admin\roles.php(86): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\roles.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->roles()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 12:14:52 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/roles]
+in APPPATH\Views\admin\roles.php on line 86.
+ 1 APPPATH\Views\admin\roles.php(86): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\admin\\roles.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Admin\AdminController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->roles()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 12:53:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/sales_history.php"
+[Method: GET, Route: admin/sales-history]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(118): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->salesHistory()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 13:54:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/sales_history.php"
+[Method: GET, Route: admin/sales-history]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(118): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->salesHistory()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-06-17 16:34:29 --> mysqli_sql_exception: Table 'drug_dispencer1.bids' doesn't exist in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(308): mysqli->query()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Auctioneer\AuctioneerController.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBids()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+CRITICAL - 2024-06-17 16:34:29 --> Error: Call to a member function getResult() on bool
+[Method: GET, Route: auctioneer/view-bids]
+in SYSTEMPATH\Model.php on line 276.
+ 1 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 2 APPPATH\Controllers\Auctioneer\AuctioneerController.php(30): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBids()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-06-17 16:41:29 --> mysqli_sql_exception: Table 'drug_dispencer1.bids' doesn't exist in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(308): mysqli->query()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Auctioneer\AuctioneerController.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBids()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+CRITICAL - 2024-06-17 16:41:29 --> Error: Call to a member function getResult() on bool
+[Method: GET, Route: auctioneer/view-bids]
+in SYSTEMPATH\Model.php on line 276.
+ 1 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 2 APPPATH\Controllers\Auctioneer\AuctioneerController.php(30): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBids()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-06-17 16:41:32 --> mysqli_sql_exception: Table 'drug_dispencer1.bids' doesn't exist in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(308): mysqli->query()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Auctioneer\AuctioneerController.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+CRITICAL - 2024-06-17 16:41:32 --> Error: Call to a member function getResult() on bool
+[Method: GET, Route: auctioneer/manage-bids]
+in SYSTEMPATH\Model.php on line 276.
+ 1 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 2 APPPATH\Controllers\Auctioneer\AuctioneerController.php(38): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 17:06:45 --> ErrorException: Undefined property: App\Controllers\Auctioneer\AuctioneerController::$bidModel
+[Method: GET, Route: auctioneer/manage-bids]
+in APPPATH\Controllers\Auctioneer\AuctioneerController.php on line 39.
+ 1 APPPATH\Controllers\Auctioneer\AuctioneerController.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 17:06:54 --> ErrorException: Undefined property: App\Controllers\Auctioneer\AuctioneerController::$bidModel
+[Method: GET, Route: auctioneer/manage-bids]
+in APPPATH\Controllers\Auctioneer\AuctioneerController.php on line 39.
+ 1 APPPATH\Controllers\Auctioneer\AuctioneerController.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 17:07:45 --> ErrorException: Undefined property: App\Controllers\Auctioneer\AuctioneerController::$bidModel
+[Method: GET, Route: auctioneer/manage-bids]
+in APPPATH\Controllers\Auctioneer\AuctioneerController.php on line 39.
+ 1 APPPATH\Controllers\Auctioneer\AuctioneerController.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-17 17:07:47 --> ErrorException: Undefined property: App\Controllers\Auctioneer\AuctioneerController::$bidModel
+[Method: GET, Route: auctioneer/manage-bids]
+in APPPATH\Controllers\Auctioneer\AuctioneerController.php on line 39.
+ 1 APPPATH\Controllers\Auctioneer\AuctioneerController.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')

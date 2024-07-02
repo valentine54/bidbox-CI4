@@ -13,53 +13,50 @@ class Register extends BaseController
         return view('register');
     }
 
+
+
     public function process()
     {
-        $validation = \Config\Services::validation();
+        helper(['form', 'url']);
 
-        $validation->setRules([
-            'name' => 'required',
+        // Validate input fields
+        $validationRules = [
+            'Name' => 'required',
             'email' => 'required',
             'password' => 'required',
             'confirm_password' => 'required|matches[password]',
             'contact' => 'required|min_length[10]|max_length[15]',
-            'age' => 'required|integer',
-            'role' => 'required|in_list[admin,bidder,seller,auctioneer]'
-        ]);
+        ];
 
-        if (!$validation->withRequest($this->request)->run()) {
-            $errors = $validation->getErrors();
-
-            // Check if there is a specific error for password confirmation
-            $passwordConfirmationError = isset($errors['confirm_password']) ? $errors['confirm_password'] : '';
-
-            return redirect()->to('register')->withInput()->with('errors', $errors)->with('password_confirmation_error', $passwordConfirmationError);
+        if (!$this->validate($validationRules)) {
+            // Validation failed, redirect to register page with errors
+            return redirect()->to('register')->withInput()->with('validation', $this->validator);
         }
 
+        $defaultProfilePicture = 'uploads/default_user.jpg';
+
+        // Save user data to database
         $model = new UserModel();
-        $activationToken = bin2hex(random_bytes(16));
         $data = [
-            'name' => $this->request->getPost('name'),
-            'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
-            'contact' => $this->request->getPost('contact'),
-            'age' => $this->request->getPost('age'),
-            'role' => $this->request->getPost('role'),
-            'status' => 0, // User is not active yet
-            'activation_token' => $activationToken,
+            'Name' => $this->request->getVar('Name'),
+            'email' => $this->request->getVar('email'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+            'contact' => $this->request->getVar('contact'),
+            'profile_picture' =>$defaultProfilePicture,
+            'status' => 0, // Example status (you can adjust as needed)
+            'activation_token' => bin2hex(random_bytes(16)),
         ];
 
         if ($model->save($data)) {
-            log_message('debug', 'User registered: ' . json_encode($data));
-            if ($this->sendActivationEmail($data['email'], $activationToken)) {
-                // Redirect to the activation notice page with the email address
-                return redirect()->to('activation_notice')->with('email', $data['email']);
-            } else {
-                log_message('error', 'Failed to send activation email for user: ' . $data['email']);
+            // Send activation email
+            if (!$this->sendActivationEmail($data['email'], $data['activation_token'])) {
                 return redirect()->to('register')->with('error', 'Failed to send activation email. Please try again.');
             }
+
+            // User registration successful, redirect to activation notice or login page
+            return redirect()->to('activation_notice')->with('email', $data['email']);
         } else {
-            log_message('error', 'Failed to save user data to database.');
+            // Database save failed, handle accordingly
             return redirect()->to('register')->with('error', 'Registration failed. Please try again.');
         }
     }
@@ -100,8 +97,70 @@ class Register extends BaseController
 
         $emailService->setTo($email);
         $emailService->setSubject('Account Activation');
-        $message = "<p>Please click the link below to activate your account:</p>";
-        $message .= "<p><a href='".base_url('activate/' . $token)."'>Activate Account</a></p>";
+
+        $message = "
+    <html>
+    <head>
+        <style>
+            .email-container {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                margin: auto;
+            }
+            .email-header {
+                background-color: #995fd5;
+                color: white;
+                padding: 10px;
+                border-radius: 5px 5px 0 0;
+                text-align: center;
+            }
+            .email-body {
+                padding: 20px;
+                background-color: white;
+                border-radius: 0 0 5px 5px;
+                color: black;
+            }
+            .button-container {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white !important;
+                background-color: #7e3fd7;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .button:hover {
+                background-color: #432188;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='email-container'>
+            <div class='email-header'>
+                <h1>Account Activation</h1>
+            </div>
+            <div class='email-body'>
+               <h3>Welcome to BidBox!</h3>
+               <p>Thank you for joining our community.We are excited to have you join us.Be ready to add luxury to your collections like never before.</p>
+                <p>To officially join us please click the button below to activate your account:</p>
+               <div class='button-container'>
+                    <a href='".base_url('activate/' . $token)."' class='button' style='color: white;'>Activate Account</a>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    ";
+
         $emailService->setMessage($message);
 
         if (!$emailService->send()) {
@@ -110,6 +169,7 @@ class Register extends BaseController
         }
         return true;
     }
+
 
 
 

@@ -1,0 +1,758 @@
+CRITICAL - 2024-07-01 09:33:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/sales_history.php"
+[Method: GET, Route: admin/sales-history]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(215): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->salesHistory()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-07-01 10:22:12 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Models\UserModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp3\htdocs\Ci4_project\app\Controllers\Admin\AdminController.php(15): App\Models\UserModel->getUsersByStatus()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#14 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 C:\xampp3\htdocs\Ci4_project\app\Models\UserModel.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Admin\AdminController.php(15): App\Models\UserModel->getUsersByStatus()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+CRITICAL - 2024-07-01 10:22:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\UserModel.php(18): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin\AdminController.php(15): App\Models\UserModel->getUsersByStatus()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-07-01 10:22:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Models\UserModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp3\htdocs\Ci4_project\app\Controllers\Admin\AdminController.php(15): App\Models\UserModel->getUsersByStatus()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#14 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 C:\xampp3\htdocs\Ci4_project\app\Models\UserModel.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Admin\AdminController.php(15): App\Models\UserModel->getUsersByStatus()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+CRITICAL - 2024-07-01 10:22:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\UserModel.php(18): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin\AdminController.php(15): App\Models\UserModel->getUsersByStatus()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-07-01 10:22:29 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Auctioneer\AuctioneerController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 C:\xampp3\htdocs\Ci4_project\app\Controllers\Auctioneer\AuctioneerController.php(45): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#13 {main}
+CRITICAL - 2024-07-01 10:22:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: auctioneer/manage-bids]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Controllers\Auctioneer\AuctioneerController.php(45): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:48:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "profile/edit.php"
+[Method: GET, Route: profile/edit]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\ProfileController.php(14): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:48:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "profile/edit.php"
+[Method: GET, Route: profile/edit]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\ProfileController.php(14): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:49:45 --> ErrorException: include(sidebar.php): Failed to open stream: No such file or directory
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 101.
+ 1 APPPATH\Views\profile\edit.php(101): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\profile\edit.php(101): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\ProfileController.php(14): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:49:48 --> ErrorException: include(sidebar.php): Failed to open stream: No such file or directory
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 101.
+ 1 APPPATH\Views\profile\edit.php(101): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\profile\edit.php(101): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\ProfileController.php(14): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:49:55 --> ErrorException: include(sidebar.php): Failed to open stream: No such file or directory
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 101.
+ 1 APPPATH\Views\profile\edit.php(101): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\profile\edit.php(101): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\ProfileController.php(14): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:51:17 --> ErrorException: Undefined array key "Name"
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 112.
+ 1 APPPATH\Views\profile\edit.php(112): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ProfileController.php(14): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:51:49 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 112.
+ 1 APPPATH\Views\profile\edit.php(112): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ProfileController.php(14): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:57:45 --> ErrorException: Undefined array key "Name"
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 112.
+ 1 APPPATH\Views\profile\edit.php(112): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ProfileController.php(14): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 10:57:45 --> ErrorException: Undefined array key "Name"
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 112.
+ 1 APPPATH\Views\profile\edit.php(112): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ProfileController.php(14): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 11:01:03 --> ErrorException: Undefined array key "Name"
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 112.
+ 1 APPPATH\Views\profile\edit.php(112): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ProfileController.php(14): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 11:01:04 --> ErrorException: Undefined array key "Name"
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\edit.php on line 112.
+ 1 APPPATH\Views\profile\edit.php(112): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ProfileController.php(14): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:12:56 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/manage-bids]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\manage_bids.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\manage_bids.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(47): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:12:59 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-bids]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_bids.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_bids.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(38): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBids()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:13:00 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-bidders]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_bidders.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_bidders.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(30): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBidders()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:25:36 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/manage-bids]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\manage_bids.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\manage_bids.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(47): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:25:39 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-sellers]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_sellers.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_sellers.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(22): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewSellers()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:25:40 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\profile_sidebar.php on line 2.
+ 1 APPPATH\Views\profile\profile_sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\profile\edit.php(114): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\profile_sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\ProfileController.php(14): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:26:00 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-sellers]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_sellers.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_sellers.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(22): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewSellers()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:26:01 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\profile_sidebar.php on line 2.
+ 1 APPPATH\Views\profile\profile_sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\profile\edit.php(114): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\profile_sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\ProfileController.php(14): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:26:03 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/manage-bids]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\manage_bids.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\manage_bids.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(47): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->manageBids()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:26:03 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-bids]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_bids.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_bids.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(38): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBids()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:26:04 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-bidders]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_bidders.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_bidders.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(30): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBidders()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:26:05 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-sellers]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_sellers.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_sellers.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(22): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewSellers()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:26:05 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: profile/edit]
+in APPPATH\Views\profile\profile_sidebar.php on line 2.
+ 1 APPPATH\Views\profile\profile_sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\profile\edit.php(114): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\profile_sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\profile\\edit.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\ProfileController.php(14): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->edit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 12:26:05 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-sellers]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_sellers.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_sellers.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(22): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewSellers()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 18:24:56 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-bids]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_bids.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_bids.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(38): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBids()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 18:24:58 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: auctioneer/view-bids]
+in APPPATH\Views\auctioneer\sidebar.php on line 2.
+ 1 APPPATH\Views\auctioneer\sidebar.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\auctioneer\view_bids.php(15): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\auctioneer\\view_bids.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Auctioneer\AuctioneerController.php(38): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewBids()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-07-01 20:02:12 --> mysqli_sql_exception: Lock wait timeout exceeded; try restarting transaction in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(308): mysqli->query()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#6 C:\xampp3\htdocs\Ci4_project\system\Model.php(854): CodeIgniter\BaseModel->update()
+#7 C:\xampp3\htdocs\Ci4_project\app\Controllers\ProfileController.php(54): CodeIgniter\Model->update()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\ProfileController->update()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#14 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#15 {main}
+ERROR - 2024-07-01 20:08:51 --> mysqli_sql_exception: Lock wait timeout exceeded; try restarting transaction in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(308): mysqli->query()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#6 C:\xampp3\htdocs\Ci4_project\system\Model.php(854): CodeIgniter\BaseModel->update()
+#7 C:\xampp3\htdocs\Ci4_project\app\Controllers\ProfileController.php(54): CodeIgniter\Model->update()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\ProfileController->update()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#14 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#15 {main}
+ERROR - 2024-07-01 20:14:38 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Auctioneer\AuctioneerController.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewSellers()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp3\htdocs\Ci4_project\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 C:\xampp3\htdocs\Ci4_project\app\Controllers\Auctioneer\AuctioneerController.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewSellers()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#12 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#13 {main}
+CRITICAL - 2024-07-01 20:14:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: auctioneer/view-sellers]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Controllers\Auctioneer\AuctioneerController.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auctioneer\AuctioneerController->viewSellers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+ERROR - 2024-07-01 20:15:25 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp3\htdocs\Ci4_project\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#6 C:\xampp3\htdocs\Ci4_project\system\Model.php(854): CodeIgniter\BaseModel->update()
+#7 C:\xampp3\htdocs\Ci4_project\app\Controllers\ProfileController.php(56): CodeIgniter\Model->update()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\ProfileController->update()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#14 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp3\htdocs\Ci4_project\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\xampp3\htdocs\Ci4_project\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp3\htdocs\Ci4_project\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query()
+#3 C:\xampp3\htdocs\Ci4_project\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#4 C:\xampp3\htdocs\Ci4_project\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+#5 C:\xampp3\htdocs\Ci4_project\system\Model.php(854): CodeIgniter\BaseModel->update()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\ProfileController.php(56): CodeIgniter\Model->update()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\ProfileController->update()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+CRITICAL - 2024-07-01 20:15:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: profile/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate()
+ 5 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update()
+ 6 APPPATH\Controllers\ProfileController.php(56): CodeIgniter\Model->update()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfileController->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 22:11:27 --> ErrorException: Undefined variable $user_logged_in
+[Method: GET, Route: /]
+in APPPATH\Views\home.php on line 214.
+ 1 APPPATH\Views\home.php(214): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\HomeController.php(22): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-07-01 22:11:30 --> ErrorException: Undefined variable $user_logged_in
+[Method: GET, Route: /]
+in APPPATH\Views\home.php on line 214.
+ 1 APPPATH\Views\home.php(214): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp3\\htdocs\\Ci4_project\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\HomeController.php(22): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')

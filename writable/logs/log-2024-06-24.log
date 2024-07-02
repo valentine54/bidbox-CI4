@@ -1,0 +1,39 @@
+CRITICAL - 2024-06-24 10:00:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/sales_history.php"
+[Method: GET, Route: admin/sales-history]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(201): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->salesHistory()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-24 10:10:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/sales_history.php"
+[Method: GET, Route: admin/sales-history]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(201): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->salesHistory()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')
+CRITICAL - 2024-06-24 10:11:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/sales_history.php"
+[Method: GET, Route: admin/sales-history]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Admin\AdminController.php(201): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\AdminController->salesHistory()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp3\\htdocs\\Ci4_project\\public\\index.php')

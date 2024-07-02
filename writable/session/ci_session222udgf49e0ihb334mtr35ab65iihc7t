@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1718631815;_ci_previous_url|s:37:"http://localhost:8080/index.php/login";user|a:3:{s:2:"id";i:0;s:5:"email";s:18:"admin234@gmail.com";s:4:"role";s:5:"admin";}isLoggedIn|b:1;success|s:26:"User deleted successfully.";__ci_vars|a:1:{s:7:"success";s:3:"new";}

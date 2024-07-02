@@ -1,0 +1,34 @@
+ERROR - 2024-05-22 13:12:25 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): Unable to connect to smtp.gmail.com:587 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in C:\xampp3\htdocs\Ci4_project\system\Email\Email.php:1896
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\xampp3\htdocs\Ci4_project\system\Email\Email.php(1896): fsockopen()
+#2 C:\xampp3\htdocs\Ci4_project\system\Email\Email.php(1809): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp3\htdocs\Ci4_project\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp3\htdocs\Ci4_project\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp3\htdocs\Ci4_project\app\Controllers\Register.php(105): CodeIgniter\Email\Email->send()
+#6 C:\xampp3\htdocs\Ci4_project\app\Controllers\Register.php(52): App\Controllers\Register->sendActivationEmail()
+#7 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(933): App\Controllers\Register->process()
+#8 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\xampp3\htdocs\Ci4_project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\xampp3\htdocs\Ci4_project\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp3\htdocs\Ci4_project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\xampp3\htdocs\Ci4_project\public\index.php(59): CodeIgniter\Boot::bootWeb()
+#13 C:\xampp3\htdocs\Ci4_project\system\Commands\Server\rewrite.php(49): require_once('...')
+#14 {main}
+ERROR - 2024-05-22 13:12:25 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-05-22 13:12:25 --> 
+ERROR - 2024-05-22 13:12:25 --> Email sending failed: Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Wed, 22 May 2024 13:12:03 +0000
+To: kellygituka@gmail.com
+Subject: =?UTF-8?Q?Account=20Activation?=
+From: &quot;Bid Box&quot; &lt;kellygituka@gmail.com&gt;
+Return-Path: &lt;kellygituka@gmail.com&gt;
+Reply-To: &lt;kellygituka@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: kellygituka@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;664def23dc6776.84604298@gmail.com&gt;
+Mime-Version: 1.0
+
+</pre>
+ERROR - 2024-05-22 13:12:25 --> Failed to send activation email for user: kellygituka@gmail.com
