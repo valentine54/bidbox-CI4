@@ -1,109 +1,99 @@
-# CodeIgniter 4 Development
 
-[![PHPUnit](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpunit.yml/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpunit.yml)
-[![PHPStan](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpstan.yml/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpstan.yml)
-[![Psalm](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-psalm.yml/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-psalm.yml)
-[![Coverage Status](https://coveralls.io/repos/github/codeigniter4/CodeIgniter4/badge.svg?branch=develop)](https://coveralls.io/github/codeigniter4/CodeIgniter4?branch=develop)
-[![Downloads](https://poser.pugx.org/codeigniter4/framework/downloads)](https://packagist.org/packages/codeigniter4/framework)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/codeigniter4/CodeIgniter4)](https://packagist.org/packages/codeigniter4/framework)
-[![GitHub stars](https://img.shields.io/github/stars/codeigniter4/CodeIgniter4)](https://packagist.org/packages/codeigniter4/framework)
+
 [![GitHub license](https://img.shields.io/github/license/codeigniter4/CodeIgniter4)](https://github.com/codeigniter4/CodeIgniter4/blob/develop/LICENSE)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/codeigniter4/CodeIgniter4/pulls)
-<br>
 
-## What is CodeIgniter?
+# BidBox
+An online luxury auctioning platform that connects buyers with unique luxury items through auctions.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Description
+BidBox is a web-based platform designed to facilitate online luxury auctions. Users can browse, bid on, and purchase high-end luxury items from various categories. The platform aims to provide a seamless and secure auction experience for both buyers and sellers.The platform has auctioneers who approve and disapprove bids.
 
-This repository holds the source code for CodeIgniter 4 only.
-Version 4 is a complete rewrite to bring the quality and the code into a more modern version,
-while still keeping as many of the things intact that has made people love the framework over the years.
+## Project Setup/Installation Instructions
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### Dependencies
+- PHP >= 8.1
+- CodeIgniter 4.x
+- MySQL
+- Composer
 
-### Documentation
+### Installation Steps
+1. *Clone the Repository:*
+   git clone https://github.com/Valentine54/bidbox-CI4.git
+   cd bidbox-CI4.git
 
-The [User Guide](https://codeigniter.com/user_guide/) is the primary documentation for CodeIgniter 4.
+2. *Install Composer Dependencies:*
+   composer install
 
-You will also find the [current **in-progress** User Guide](https://codeigniter4.github.io/CodeIgniter4/).
-As with the rest of the framework, it is a work in progress, and will see changes over time to structure, explanations, etc.
+3. *Set Up Environment Variables:*
+   - Duplicate the env file and rename it to .env.
+   - Configure your database settings and other environment variables in the .env file.
 
-You might also be interested in the [API documentation](https://codeigniter4.github.io/api/) for the framework components.
+4. *Migrate the Database:*
+   php spark migrate
 
-## Important Change with index.php
+5. *Start the Development Server:*
+   php spark serve
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## Usage Instructions
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### How to Run
+1. *Start your local server environment:*
+   Ensure your local server (e.g., XAMPP, MAMP) with PHP and MySQL is running.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+2. *Access the Application:*
+   Open your web browser and navigate to [http://localhost:8080](http://localhost:8080).
 
-## Repository Management
+### Examples
+- *Browse Auction Items:*
+  Visit the homepage to view available auction items and their details.
+  (http://localhost:8080/)
 
-CodeIgniter is developed completely on a volunteer basis. As such, please give up to 7 days
-for your issues to be reviewed. If you haven't heard from one of the team in that time period,
-feel free to leave a comment on the issue so that it gets brought back to our attention.
+- *Auctioneer to view a Bid:*
+  Click on view bids after successful login.
+  ( http://localhost:8080/index.php/auctioneer/view-bidders)
+  
 
-> [!IMPORTANT]
-> We use GitHub issues to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-> We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-> FEATURE REQUESTS.
+### Input/Output
+- *Input:* User actions such as browsing items, placing bids, and updating account details.
+- *Output:* Updated auction status, bid history, and user details.
 
-If you raise an issue here that pertains to support or a feature request, it will
-be closed! If you are not sure if you have found a bug, raise a thread on the forum first -
-someone else may have encountered the same thing.
+## Project Structure
 
-Before raising a new GitHub issue, please check that your bug hasn't already
-been reported or fixed.
+### Overview
+- *app/Controllers:* Contains all controller files, including AdminController.php.
+- *app/Models:* Contains model files like UserModel.php for database interactions.
+- *app/Views:* Contains view files for frontend rendering, organized by auction item categories.
+- *public/:* Publicly accessible files like CSS, JS, and uploaded item images and profile images.
+- *writable/uploads:* Directory where uploaded application images are stored but cannot be viewed publicly.
 
-We use pull requests (PRs) for CONTRIBUTIONS to the repository.
-We are looking for contributions that address one of the reported bugs or
-approved work packages.
+### Key Files
+- *app/Controllers/AdminController.php:* Handles all the operations an admin is able to do in a system.Admin has some of the most important roles
+- *app/Models/productModel.php:* Interacts with the database to save and retrieve auction item data.
+- *app/Views/home.php:* Main view file for displaying auction items and managing bids.
+- *public/css/auction.css:* Contains custom styles for the auction interface.
 
-Do not use a PR as a form of feature request.
-Unsolicited contributions will only be considered if they fit nicely
-into the framework roadmap.
-Remember that some components that were part of CodeIgniter 3 are being moved
-to optional packages, with their own repository.
+## Additional Sections
 
-## Contributing
+### Project Status
+This project is actively in development.
 
-We **are** accepting contributions from the community! It doesn't matter whether you can code, write documentation, or help find bugs,
-all contributions are welcome.
+### Known Issues
+- Improved validation and error handling for bid submissions.
+- Enhancements for scalability and performance under high traffic conditions.
+- Better handle applications of users to join the system
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing/README.md).
+### License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-CodeIgniter has had thousands on contributions from people since its creation. This project would not be what it is without them.
+### Acknowledgements
+- CodeIgniter 4 Documentation
+- Bootstrap
+- Php Storm IDE
 
-<a href="https://github.com/codeigniter4/CodeIgniter4/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=codeigniter4/CodeIgniter4" />
-</a>
+### Contact Information
+For questions or feedback, please contact us through the issues section of the repository.
 
-Made with [contrib.rocks](https://contrib.rocks).
 
-## Server Requirements
 
-PHP version 8.1 or higher is required, with the following extensions installed:
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-## Running CodeIgniter Tests
-
-Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
