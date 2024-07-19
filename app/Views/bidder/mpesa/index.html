@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Make a Payment</h2>
+    <form id="paymentForm">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="254700000000" required>
+        <button type="button" onclick="makePayment()">Pay Now</button>
+    </form>
+
+    <script>
+        function makePayment() {
+            var phone = document.getElementById('phone').value;
+
+            $.ajax({
+                url: '<?= site_url('bidder/stkcontroller/initiateSTKPush') ?>',
+                type: 'POST',
+                dataType: 'json',
+                data: { phone: phone },
+                success: function(response) {
+                    console.log(response);
+                    alert('Payment initiated successfully.');
+                    // Redirect or handle success as needed
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                    alert('Payment initiation failed. Please try again.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

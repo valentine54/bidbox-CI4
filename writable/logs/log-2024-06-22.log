@@ -1,0 +1,23 @@
+CRITICAL - 2024-06-22 03:11:26 --> TypeError: CodeIgniter\Router\RouteCollection::{closure}(): Argument #1 ($routes) must be of type CodeIgniter\Routing\Router, CodeIgniter\Router\RouteCollection given, called in C:\xampp\htdocs\ci4\system\Router\RouteCollection.php on line 800
+[Method: CLI, Route: serve]
+in APPPATH\Config\Routes.php on line 32.
+ 1 SYSTEMPATH\Router\RouteCollection.php(800): CodeIgniter\Router\RouteCollection->{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 2 APPPATH\Config\Routes.php(32): CodeIgniter\Router\RouteCollection->group('seller', [...], Object(Closure))
+ 3 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\ci4\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\Boot.php(338): CodeIgniter\CLI\Console->run()
+ 6 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 7 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2024-06-22 03:13:53 --> ArgumentCountError: Too few arguments to function CodeIgniter\Router\RouteCollection::__construct(), 0 passed in C:\xampp\htdocs\ci4\app\Config\Routes.php on line 32 and exactly 3 expected
+[Method: CLI, Route: serve]
+in SYSTEMPATH\Router\RouteCollection.php on line 281.
+ 1 APPPATH\Config\Routes.php(32): CodeIgniter\Router\RouteCollection->__construct()
+ 2 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\xampp\\htdocs\\ci4\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\Boot.php(338): CodeIgniter\CLI\Console->run()
+ 5 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 6 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+INFO - 2024-06-22 03:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-22 03:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-22 20:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-22 20:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
